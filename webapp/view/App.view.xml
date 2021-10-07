@@ -6,6 +6,7 @@
 	height="100%"
 	busyIndicatorDelay="0"
 >
-<Input value = "roger" ></Input>
+<Label text="{i18n>ponumber}"></Label>
+<Input  value = "{/poinput/ponumber}" width="300px" ></Input>
 <Button text="Click" press="Onclick"></Button>
 </mvc:View>

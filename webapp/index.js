@@ -39,13 +39,40 @@
 // 3.from index.js file we are calling the App.xml file and place it in the body content of HTML.
 // *---------------------------------------------------------------------------------*
 
-sap.ui.define(["sap/ui/core/mvc/XMLView"],function (XMLView){
-"use strict";
+// sap.ui.define(["sap/ui/model/json/JSONModel",
+//                 "sap/ui/core/mvc/Controller"
+// ],
 
-new XMLView.create({
-    viewName : "search.po.view.App"
-}).then(function (oView){
-        oView.placeAt("content");
-});
-});
+// function (JSONModel,Controller){
+//     "use strict";
+// return Controller.extend("search.po.controller.App",{
+
+//     onInit: function ()
+//     {
+//         var poinput = {
+//                             poinput : {
+//                                             ponumber : ""
+//                                       }
+//                       };
+
+//          var oModel = new JSONModel(poinput);
+//          this.getView().setModel(oModel);
+
+//     }
+
+// });
+         
+// });
 	
+
+
+sap.ui.define([
+    "sap/ui/core/mvc/XMLView"
+    ],function(XMLView){
+        "use strict";
+       new XMLView.create({
+            viewName : "search.po.view.App"
+        }).then(function(oView){
+            oView.placeAt("content");
+        });
+    });
